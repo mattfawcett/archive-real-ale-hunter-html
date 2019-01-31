@@ -1,0 +1,1032 @@
+.tweet {
+  font-family: Georgia, serif;
+  font-size: 120%;
+  color: #085258; }
+  .tweet .tweet_list {
+    -webkit-border-radius: .5em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #8ADEE2; }
+    .tweet .tweet_list li {
+      overflow: auto;
+      padding: .5em; }
+      .tweet .tweet_list li a {
+        color: #0C717A; }
+    .tweet .tweet_list .tweet_even {
+      background-color: #91E5E7; }
+    .tweet .tweet_list .tweet_avatar {
+      padding-right: .5em;
+      float: left; }
+      .tweet .tweet_list .tweet_avatar img {
+        vertical-align: middle; }
+/* SLIMBOX */
+
+#lbOverlay {
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	cursor: pointer;
+}
+
+#lbCenter, #lbBottomContainer {
+	position: absolute;
+	z-index: 9999;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.lbLoading {
+	background: #fff url(../images/loading.html) no-repeat center;
+}
+
+#lbImage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 10px solid #fff;
+	background-repeat: no-repeat;
+}
+
+#lbPrevLink, #lbNextLink {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 50%;
+	outline: none;
+}
+
+#lbPrevLink {
+	left: 0;
+}
+
+#lbPrevLink:hover {
+	background: transparent url(../images/prevlabel.html) no-repeat 0 15%;
+}
+
+#lbNextLink {
+	right: 0;
+}
+
+#lbNextLink:hover {
+	background: transparent url(../images/nextlabel.html) no-repeat 100% 15%;
+}
+
+#lbBottom {
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666;
+	line-height: 1.4em;
+	text-align: left;
+	border: 10px solid #fff;
+	border-top-style: none;
+}
+
+#lbCloseLink {
+	display: block;
+	float: right;
+	width: 66px;
+	height: 22px;
+	background: transparent url(../images/closelabel.html) no-repeat center;
+	margin: 5px 0;
+	outline: none;
+}
+
+#lbCaption, #lbNumber {
+	margin-right: 71px;
+}
+
+#lbCaption {
+	font-weight: bold;
+}
+/* ----------------------------------------------
+  Template Name : VectorLover
+  Template Code : S-0026
+  Version : 1.0
+  Author : Erwin Aligam
+  Author URI : http://www.styleshout.com/
+  Last Date Modified : July 31, 2008
+ ------------------------------------------------ */
+/* ----------------------------------------------
+   HTML ELEMENTS
+------------------------------------------------- */
+/* Top Elements */
+/* line 17, ../../app/assets/stylesheets/application.scss */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* line 19, ../../app/assets/stylesheets/application.scss */
+body {
+  background: #cccccc url(bg-10988afeb407219f6118e0b04fcf5e7a.gif) repeat-x;
+  font: 12px/170% "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #6B6B6B;
+  text-align: center;
+}
+
+/* links */
+/* line 27, ../../app/assets/stylesheets/application.scss */
+a, a:visited {
+  color: #79A325;
+  background: inherit;
+  text-decoration: none;
+}
+
+/* line 32, ../../app/assets/stylesheets/application.scss */
+a:hover {
+  color: #73471B;
+  background: inherit;
+  text-decoration: underline;
+}
+
+/* headers */
+/* line 40, ../../app/assets/stylesheets/application.scss */
+h1, h2, h3 {
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  font-weight: Bold;
+  padding: 10px;
+  color: #444;
+}
+
+/* line 46, ../../app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 2.9em;
+}
+
+/* line 49, ../../app/assets/stylesheets/application.scss */
+h2 {
+  font-size: 2.5em;
+  color: #88AC0B;
+}
+
+/* line 53, ../../app/assets/stylesheets/application.scss */
+h3 {
+  font-size: 1.6em;
+  font-weight: normal;
+  padding: 16px 10px 4px 10px;
+}
+
+/* Paragraph */
+/* line 60, ../../app/assets/stylesheets/application.scss */
+p {
+  padding: 12px 10px;
+}
+
+/* Lists */
+/* line 63, ../../app/assets/stylesheets/application.scss */
+ul, ol {
+  margin: 10px 20px;
+  padding: 0 20px;
+}
+
+/* line 67, ../../app/assets/stylesheets/application.scss */
+ul {
+  list-style: none;
+}
+
+/* line 69, ../../app/assets/stylesheets/application.scss */
+dl {
+  padding: 10px;
+  margin: 0;
+}
+
+/* line 71, ../../app/assets/stylesheets/application.scss */
+dt {
+  font-weight: bold;
+  color: #79A62E;
+}
+
+/* line 75, ../../app/assets/stylesheets/application.scss */
+dd {
+  padding-left: 25px;
+}
+
+/* images */
+/* line 80, ../../app/assets/stylesheets/application.scss */
+img {
+  background: #FAFAFA;
+  border: 1px solid #e4e4e4;
+  padding: 8px;
+}
+
+/* line 85, ../../app/assets/stylesheets/application.scss */
+img.float-right {
+  margin: 5px 0px 10px 10px;
+}
+
+/* line 88, ../../app/assets/stylesheets/application.scss */
+img.float-left {
+  margin: 5px 10px 10px 0px;
+}
+
+/* line 92, ../../app/assets/stylesheets/application.scss */
+code {
+  margin: 5px 0;
+  padding: 15px;
+  text-align: left;
+  display: block;
+  overflow: auto;
+  font: 500 1em/1.5em "Lucida Console", "Courier New", monospace;
+  /* white-space: pre; */
+  border: 1px solid #eee8e1;
+  background: #FAF7F5;
+}
+
+/* line 103, ../../app/assets/stylesheets/application.scss */
+acronym {
+  cursor: help;
+  border-bottom: 1px dotted #895f30;
+}
+
+/* line 107, ../../app/assets/stylesheets/application.scss */
+blockquote {
+  margin: 15px 10px;
+  padding: 5px 7px 5px 40px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.6em;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #80614D;
+  border: 1px solid #eee8e1;
+  background: #faf7f5 url(quote-d304c310906527e0a80d929900d2ac35.gif) no-repeat 15px 15px;
+}
+
+/* start - table */
+/* line 121, ../../app/assets/stylesheets/application.scss */
+table {
+  border-collapse: collapse;
+  margin: 15px 10px;
+}
+
+/* line 125, ../../app/assets/stylesheets/application.scss */
+th {
+  height: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #fff;
+  text-align: left;
+  background: #ADD163;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c4de8f #93c138 #93c138 #c4de8f;
+}
+
+/* line 136, ../../app/assets/stylesheets/application.scss */
+tr {
+  height: 34px;
+  background: #fff;
+}
+
+/* line 140, ../../app/assets/stylesheets/application.scss */
+td {
+  padding-left: 11px;
+  padding-right: 11px;
+  border: 1px solid #e7f0cc;
+}
+
+/* end - table */
+/* form elements */
+/* line 148, ../../app/assets/stylesheets/application.scss */
+form {
+  margin: 20px 10px;
+  padding: 15px 25px 25px 20px;
+  border: 1px solid #eee8e1;
+  background: #FAF7F5;
+}
+
+/* line 154, ../../app/assets/stylesheets/application.scss */
+form p {
+  border-bottom: 1px solid #ece5dd;
+  padding: 12px 0 5px 0;
+  margin: 0;
+  color: #9D6D37;
+}
+
+/* line 159, ../../app/assets/stylesheets/application.scss */
+label {
+  font-weight: bold;
+  color: #A7743B;
+}
+
+/* line 163, ../../app/assets/stylesheets/application.scss */
+input, select, textarea {
+  margin: 5px 0;
+  padding: 5px;
+  color: #6A6969;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d4d4d4 #ebebeb #ebebeb #d4d4d4;
+}
+
+/* line 171, ../../app/assets/stylesheets/application.scss */
+option {
+  padding-right: 0.5em;
+}
+
+/* line 173, ../../app/assets/stylesheets/application.scss */
+#name, #email, #message, #website {
+  width: 455px;
+}
+
+/* line 176, ../../app/assets/stylesheets/application.scss */
+input.button {
+  font: bold 12px Arial, Sans-serif;
+  height: 30px;
+  margin: 0;
+  padding: 2px 3px;
+  color: #fff;
+  background: #A6CD56;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c4de8f #8db836 #8db836 #c4de8f;
+}
+
+/*-------------------------------------------
+   LAYOUT
+--------------------------------------------*/
+/* line 193, ../../app/assets/stylesheets/application.scss */
+#wrap {
+  position: relative;
+  width: 952px;
+  background: white url(wrap-b9ac669ff670f1c8752d42845f945677.gif) repeat-y center top;
+  margin: 40px auto 30px auto;
+  text-align: left;
+}
+
+/* line 200, ../../app/assets/stylesheets/application.scss */
+#content {
+  clear: both;
+  float: left;
+  width: 952px;
+  padding: 25px 0 60px 0;
+}
+
+/* line 206, ../../app/assets/stylesheets/application.scss */
+#header {
+  position: relative;
+  width: 952px;
+  height: 245px;
+  background: #8ab84b url(header-adf59002773034629d1d4bc385147afc.jpg) no-repeat;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 215, ../../app/assets/stylesheets/application.scss */
+#header h1#logo-text a {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font: bold 66px "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  letter-spacing: -5px;
+  text-decoration: none;
+  color: #332616;
+  /* change the values of top and left to adjust the position of the logo*/
+  top: 75px;
+  left: 55px;
+  display: none;
+}
+
+/* line 227, ../../app/assets/stylesheets/application.scss */
+#header p#slogan {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font: bold 15px "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  color: #322815;
+  letter-spacing: -0.5px;
+  display: none;
+  /* change the values of top and left to adjust the position of the slogan*/
+  top: 148px;
+  left: 150px;
+}
+
+/* top-menu */
+/* line 240, ../../app/assets/stylesheets/application.scss */
+#top-menu {
+  position: absolute;
+  margin: 0;
+  padding: 30px 15px 8px 15px;
+  font-family: "Trebuchet MS", Arial, Sans-serif;
+  color: #FFF;
+  top: 0;
+  right: 70px;
+}
+
+/* line 248, ../../app/assets/stylesheets/application.scss */
+#top-menu p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 251, ../../app/assets/stylesheets/application.scss */
+#top-menu a {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Navigation */
+/* line 257, ../../app/assets/stylesheets/application.scss */
+#nav {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  width: 952px;
+  height: 50px;
+  background: #988060 url(nav-0fedebec3447e477628623b4ad32190c.gif) no-repeat;
+}
+
+/* line 264, ../../app/assets/stylesheets/application.scss */
+#nav ul {
+  float: left;
+  list-style: none;
+  margin: 5px 0 0 0;
+  height: 45px;
+  padding: 0 0 0 40px;
+}
+
+/* line 271, ../../app/assets/stylesheets/application.scss */
+#nav ul li {
+  float: left;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+/* line 275, ../../app/assets/stylesheets/application.scss */
+#nav ul li a {
+  float: left;
+  margin: 0;
+  padding: 0 15px 0 5px;
+  color: #FFF;
+  font: bold 15px/45px "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+}
+
+/* line 284, ../../app/assets/stylesheets/application.scss */
+#nav ul li a:hover,
+#nav ul li a:active {
+  color: #E7FAA9;
+}
+
+/* line 287, ../../app/assets/stylesheets/application.scss */
+#nav ul li#current {
+  background: transparent url(left-tab-b5a313d96a6bce457a36687d77ab00cc.gif) no-repeat;
+}
+
+/* line 290, ../../app/assets/stylesheets/application.scss */
+#nav ul li#current a {
+  color: #4B3D2C;
+  background: transparent url(right-tab-548def8b228fc65da2f61baa33ecb71e.gif) no-repeat right top;
+}
+
+/* line 294, ../../app/assets/stylesheets/application.scss */
+#nav form {
+  margin: 5px 5px;
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  border: 0px;
+  position: absolute;
+  right: 50px;
+}
+
+/* line 302, ../../app/assets/stylesheets/application.scss */
+#nav input, select, textarea {
+  margin-top: 10px;
+  padding: 5px;
+  color: #6A6969;
+}
+
+/* Main Column */
+/* line 308, ../../app/assets/stylesheets/application.scss */
+#main {
+  float: left;
+  width: 610px;
+  padding: 0;
+  margin: 0 0 0 40px;
+  display: inline;
+}
+
+/* line 314, ../../app/assets/stylesheets/application.scss */
+#main h2 {
+  font: bold 2.9em "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  color: #51432F;
+  padding: 10px 0 5px 5px;
+  margin-left: 5px;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #e4f2c8;
+}
+
+/* line 322, ../../app/assets/stylesheets/application.scss */
+#main h2 a {
+  color: #51432f;
+  text-decoration: none;
+}
+
+/* line 326, ../../app/assets/stylesheets/application.scss */
+#main ul li {
+  list-style-image: url(bullet-2827accadc0cb8fa2115880e3d2b383c.gif);
+}
+
+/* line 330, ../../app/assets/stylesheets/application.scss */
+#main-full-width {
+  float: left;
+  width: 870px;
+  padding: 0;
+  margin: 0 0 0 40px;
+  display: inline;
+}
+
+/* line 336, ../../app/assets/stylesheets/application.scss */
+#main-full-width h2 {
+  font: bold 2.9em "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  color: #51432F;
+  padding: 10px 0 5px 5px;
+  margin-left: 5px;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #e4f2c8;
+}
+
+/* line 344, ../../app/assets/stylesheets/application.scss */
+#main-full-width h2 a {
+  color: #51432f;
+  text-decoration: none;
+}
+
+/* line 348, ../../app/assets/stylesheets/application.scss */
+#main-full-width ul li {
+  list-style-image: url(bullet-2827accadc0cb8fa2115880e3d2b383c.gif);
+}
+
+/* line 352, ../../app/assets/stylesheets/application.scss */
+#sidebar {
+  float: right;
+  width: 250px;
+  padding: 0;
+  margin: 0 45px 0 0;
+  display: inline;
+}
+
+/* line 359, ../../app/assets/stylesheets/application.scss */
+#sidebar h3 {
+  color: #51432F;
+  font: bold 1.9em "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  text-transform: none;
+  letter-spacing: -0.5px;
+  padding: 5px 0 5px 7px;
+  margin: 10px 0 5px 10px;
+  border-bottom: 1px solid #e4f2c8;
+}
+
+/* sidebar menu */
+/* line 370, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu {
+  margin: 10px 10px 5px 7px;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* line 374, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu li {
+  list-style: none;
+  margin: 0;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* line 380, ../../app/assets/stylesheets/application.scss */
+* html body #sidebar .sidemenu li {
+  height: 1%;
+}
+
+/* line 383, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu li a {
+  text-decoration: none;
+  color: #739A23;
+  background: none;
+  font-weight: normal;
+}
+
+/* line 389, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu li a span {
+  color: #7F7F7F;
+  font-size: .9em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* line 397, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu li a:hover {
+  color: #000;
+  background: none;
+}
+
+/* line 401, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu ul {
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+
+/* line 402, ../../app/assets/stylesheets/application.scss */
+#sidebar .sidemenu ul li {
+  border: none;
+}
+
+/* header quick search */
+/* line 405, ../../app/assets/stylesheets/application.scss */
+#sidebar form#qsearch {
+  padding: 0;
+  margin: 20px 0 30px 10px;
+  border: none;
+  width: 270px;
+  height: 33px;
+  background: #f2f0f0 url(qsearch-9776114f5d03cccbfc73d313e866355a.gif) no-repeat;
+}
+
+/* line 411, ../../app/assets/stylesheets/application.scss */
+#sidebar form#qsearch p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 414, ../../app/assets/stylesheets/application.scss */
+#sidebar form#qsearch input {
+  float: left;
+  border: none;
+  background: transparent;
+  color: #B8B8B8;
+  margin: 0;
+}
+
+/* line 421, ../../app/assets/stylesheets/application.scss */
+#sidebar form#qsearch .tbox {
+  margin: 5px 0 0 5px;
+  width: 220px;
+  display: inline;
+  font: 1em "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+}
+
+/* line 427, ../../app/assets/stylesheets/application.scss */
+#search form#qsearch .btn {
+  width: 24px;
+  height: 24px;
+}
+
+/* line 430, ../../app/assets/stylesheets/application.scss */
+#sidebar form#qsearch label {
+  display: none;
+}
+
+/* footer */
+/* line 435, ../../app/assets/stylesheets/application.scss */
+#footer {
+  clear: both;
+  width: 952px;
+  margin: 0;
+  padding: 30px 0 25px 0;
+  background: #cccccc url(footer-bottom-90394254f5a7c21e7bcf35b19010b637.gif) no-repeat left top;
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Sans-serif;
+  font-size: 0.95em;
+  color: #777;
+  text-align: center;
+  letter-spacing: .2px;
+}
+
+/* line 447, ../../app/assets/stylesheets/application.scss */
+#footer p {
+  padding: 10px 0;
+}
+
+/* line 450, ../../app/assets/stylesheets/application.scss */
+#footer a:hover {
+  color: #555;
+  border-bottom: 1px dotted #555555;
+  text-decoration: none;
+}
+
+/* postmeta */
+/* line 457, ../../app/assets/stylesheets/application.scss */
+.post-footer {
+  padding: 8px 10px;
+  margin: 15px 10px 10px 10px;
+  color: #977C57;
+  border: 1px solid #eee8e1;
+  background: #FAF7F5;
+}
+
+/* line 464, ../../app/assets/stylesheets/application.scss */
+.post-footer .date {
+  margin: 0 10px 0 5px;
+  padding: 7px;
+  background: #faf7f5 url(clock-a11099368b89a5ec96cd98735cb6d533.gif) no-repeat 0 2px;
+  padding-left: 30px;
+}
+
+/* line 470, ../../app/assets/stylesheets/application.scss */
+.post-footer a.comments {
+  margin: 0 10px 0 5px;
+  padding: 7px 5px;
+  background: #faf7f5 url(comments-8b3d7f167f233f3621973fe03f5c0b78.gif) no-repeat 0 2px;
+  padding-left: 30px;
+  color: #977C57;
+}
+
+/* line 477, ../../app/assets/stylesheets/application.scss */
+.post-footer a.readmore {
+  margin: 0 10px 0 5px;
+  padding: 7px 5px;
+  background: #faf7f5 url(doc-a472eb4851660f962945bc14950f2601.gif) no-repeat 0 2px;
+  padding-left: 30px;
+  color: #977C57;
+}
+
+/* line 484, ../../app/assets/stylesheets/application.scss */
+.post-footer a.edit {
+  margin: 0 10px 0 5px;
+  padding: 7px 5px;
+  background: #faf7f5 url(edit-doc-62c7afbf6a0d9795218ed190a44b173a.gif) no-repeat 0 2px;
+  padding-left: 30px;
+  color: #977C57;
+}
+
+/* line 492, ../../app/assets/stylesheets/application.scss */
+.post-info {
+  font-size: .95em;
+  padding: 0 10px;
+  margin-left: 2px;
+  color: #A98D76;
+}
+
+/* line 493, ../../app/assets/stylesheets/application.scss */
+.post-info a, .post-info a:visited {
+  color: #333;
+}
+
+/* comments list */
+/* line 496, ../../app/assets/stylesheets/application.scss */
+ol.commentlist {
+  margin: 12px 10px;
+  padding: 0;
+  border-style: solid;
+  border-color: #EEE8E1;
+  border-width: 1px 1px 0 1px;
+}
+
+/* line 503, ../../app/assets/stylesheets/application.scss */
+.commentlist li {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid #eee8e1;
+}
+
+/* line 509, ../../app/assets/stylesheets/application.scss */
+.commentlist li cite {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  padding: 7px;
+}
+
+/* line 515, ../../app/assets/stylesheets/application.scss */
+.commentlist li cite img {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 519, ../../app/assets/stylesheets/application.scss */
+.commentlist li cite .comment-data {
+  font-size: .8em;
+  font-weight: normal;
+}
+
+/* line 523, ../../app/assets/stylesheets/application.scss */
+.commentlist li .comment-text {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 527, ../../app/assets/stylesheets/application.scss */
+.commentlist li.alt {
+  background: #FAF7F5;
+}
+
+/* alignment classes */
+/* line 532, ../../app/assets/stylesheets/application.scss */
+.float-left {
+  float: left;
+}
+
+/* line 533, ../../app/assets/stylesheets/application.scss */
+.float-right {
+  float: right;
+}
+
+/* line 534, ../../app/assets/stylesheets/application.scss */
+.align-left {
+  text-align: left;
+}
+
+/* line 535, ../../app/assets/stylesheets/application.scss */
+.align-right {
+  text-align: right;
+}
+
+/* display and additional classes */
+/* line 538, ../../app/assets/stylesheets/application.scss */
+.no-border {
+  border: none;
+}
+
+/* line 539, ../../app/assets/stylesheets/application.scss */
+.clearer {
+  clear: both;
+}
+
+/* line 540, ../../app/assets/stylesheets/application.scss */
+.clear {
+  display: inline-block;
+}
+
+/* line 541, ../../app/assets/stylesheets/application.scss */
+.clear:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ".";
+}
+
+/* line 549, ../../app/assets/stylesheets/application.scss */
+.column-left {
+  float: left;
+  width: 400px;
+  display: inline;
+}
+
+/* line 555, ../../app/assets/stylesheets/application.scss */
+.column-right {
+  float: right;
+  width: 400px;
+  padding: 0;
+  display: inline;
+}
+
+/* line 561, ../../app/assets/stylesheets/application.scss */
+hr.clear {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 570, ../../app/assets/stylesheets/application.scss */
+#map {
+  width: 870px;
+  height: 600px;
+}
+
+/* line 574, ../../app/assets/stylesheets/application.scss */
+#map img {
+  background: transparent;
+  border: 0;
+  padding: 0px;
+}
+
+/* line 579, ../../app/assets/stylesheets/application.scss */
+.whats-new-photos {
+  display: block;
+}
+
+/* line 582, ../../app/assets/stylesheets/application.scss */
+.whats-new-photos p {
+  font-size: 73%;
+  display: inline;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+
+/* line 588, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-0 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 40px;
+  top: 950px;
+}
+
+/* line 595, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-1 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 245px;
+  top: 950px;
+}
+
+/* line 602, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-2 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 450px;
+  top: 950px;
+}
+
+/* line 609, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-3 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 40px;
+  top: 1150px;
+}
+
+/* line 616, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-4 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 245px;
+  top: 1150px;
+}
+
+/* line 623, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-5 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 450px;
+  top: 1150px;
+}
+
+/* line 630, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-6 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 40px;
+  top: 1350px;
+}
+
+/* line 637, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-7 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 245px;
+  top: 1350px;
+}
+
+/* line 644, ../../app/assets/stylesheets/application.scss */
+#whats-new-photo-8 {
+  position: absolute;
+  width: 185px;
+  height: 200px;
+  left: 450px;
+  top: 1350px;
+}
+
+/* line 652, ../../app/assets/stylesheets/application.scss */
+.dotted-line-username {
+  text-decoration: underline;
+}
+
+/* line 655, ../../app/assets/stylesheets/application.scss */
+.match {
+  color: red;
+}
+
+/* line 659, ../../app/assets/stylesheets/application.scss */
+#whats-new-wrapper {
+  display: block;
+  height: 1300px;
+}
+
+/* line 663, ../../app/assets/stylesheets/application.scss */
+fieldset {
+  border: 0px;
+}
+
+/* line 666, ../../app/assets/stylesheets/application.scss */
+#top-menu-logged-in {
+  display: none;
+}
+
+/* line 669, ../../app/assets/stylesheets/application.scss */
+#app-banner {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
